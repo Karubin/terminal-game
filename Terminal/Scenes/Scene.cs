@@ -6,11 +6,13 @@ namespace Terminal
 {
     abstract class Scene
     {
+        GameManager GameManager;
         Container SelectedContainer;
         List<Container> Containers;
 
-        public Scene()
+        public Scene(GameManager gameManager)
         {
+            GameManager = gameManager;
             Containers = new List<Container>();
             Init();
         }
