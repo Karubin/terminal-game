@@ -77,6 +77,7 @@ namespace Terminal
                     Stop();
                     break;
                 default:
+                    ActiveScene.HandleInput(key);
                     break;
             }
         }

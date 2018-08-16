@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Terminal.Scenes;
 
 namespace Terminal
 {
@@ -35,14 +36,22 @@ namespace Terminal
 
         public void HandleInput(ConsoleKey key)
         {
-            HandleInput(key);
+            if (!HandleInputScene(key) && SelectedContainer != null)
+            {
+                SelectedContainer.HandleInput(key);
+            }
         }
 
-        public abstract void HandleInputScene(ConsoleKey key);
+        public abstract bool HandleInputScene(ConsoleKey key);
 
         private void SelectContainer(Container container)
         {
-
+            if(SelectedContainer != null)
+            {
+                SelectedContainer.Deselect();
+            }
+            SelectedContainer = container;
+            SelectedContainer.Select();
         }
     }
 }
