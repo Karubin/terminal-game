@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Terminal.Scenes;
+using Terminal.Scenes.MainMenu;
 
 namespace Terminal
 {

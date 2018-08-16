@@ -7,9 +7,9 @@ namespace Terminal
 {
     abstract class Scene
     {
-        GameManager GameManager;
-        Container SelectedContainer;
-        List<Container> Containers;
+        public GameManager GameManager;
+        public Container SelectedContainer;
+        public readonly List<Container> Containers;
 
         public Scene(GameManager gameManager)
         {

@@ -17,17 +17,35 @@ namespace Terminal.Scenes
 
         public bool IsSelected { get; set; }
 
-        Element SelectedElement;
+        public ControlElement SelectedElement;
+        public List<ControlElement> ControlElements;
 
         public Container(GameManager gameManager)
         {
             GameManager = gameManager;
+            ControlElements = new List<ControlElement>();
+            Init();
         }
+
+        public abstract void Init();
 
         public void Render()
         {
             Console.SetCursorPosition(Column, Row);
+            for(int i = 0; i < Width/2; i++)
+            {
+                Console.Write("-");
+            }
             Console.Write(DisplayName);
+            for (int i = 0; i < Width / 2; i++)
+            {
+                Console.Write("-");
+            }
+
+            foreach (ControlElement el in ControlElements)
+            {
+                el.Render();
+            }
             RenderContainer();
         }
 
