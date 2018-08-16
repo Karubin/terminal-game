@@ -30,7 +30,7 @@ namespace Terminal
 
         public void Start()
         {
-            SetScene(new MainMenu(this));
+            SetScene(new MainMenuScene(this));
 
             isRunning = true;
             Run();

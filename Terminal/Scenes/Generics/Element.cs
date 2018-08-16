@@ -28,6 +28,7 @@ namespace Terminal.Scenes
             Console.SetCursorPosition(Column, Row);
             Console.Write(DisplayName);
             RenderElement();
+            WindowManager.ResetColors();
         }
         public abstract void RenderElement();
 

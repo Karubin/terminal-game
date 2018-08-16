@@ -12,7 +12,7 @@ namespace Terminal.Scenes
 
         public override void HandleInput(ConsoleKey key)
         {
-            throw new NotImplementedException();
+
         }
 
         public override void IsSelectedChanged()
@@ -33,7 +33,5 @@ namespace Terminal.Scenes
         {
 
         }
-
-        public Action Activate;
     }
 }

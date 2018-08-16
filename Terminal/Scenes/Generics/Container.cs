@@ -31,6 +31,7 @@ namespace Terminal.Scenes
 
         public void Render()
         {
+            Console.ForegroundColor = (IsSelected) ? ConsoleColor.Red : ConsoleColor.White;
             Console.SetCursorPosition(Column, Row);
             for(int i = 0; i < Width/2; i++)
             {
@@ -41,26 +42,101 @@ namespace Terminal.Scenes
             {
                 Console.Write("-");
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             foreach (ControlElement el in ControlElements)
             {
                 el.Render();
             }
             RenderContainer();
+            WindowManager.ResetColors();
         }
 
         public abstract void RenderContainer();
 
         public void HandleInput(ConsoleKey key)
         {
-            if (!HandleInputContainer(key) && SelectedElement != null)
+            /*
+             * Generic container always handles:
+             *      - up/down arrows to cycle through control elements
+             *      - enter to activate selected control element
+             * 
+             * Rest is handled either by child container or selected control element
+             */
+            switch (key)
             {
-                SelectedElement.HandleInput(key);
+                case ConsoleKey.UpArrow:
+                    PreviousElement();
+                    break;
+                case ConsoleKey.DownArrow:
+                    NextElement();
+                    break;
+                case ConsoleKey.Enter:
+                    if(SelectedElement.Activate != null)
+                    {
+                        SelectedElement.Activate();
+                    }
+                    break;
+                default:
+                    if (!HandleInputContainer(key) && SelectedElement != null)
+                    {
+                        SelectedElement.HandleInput(key);
+                    }
+                    break;
+
             }
         }
 
         public abstract bool HandleInputContainer(ConsoleKey key);
 
+        public void SelectElement(ControlElement element)
+        {
+            if(SelectedElement != null)
+            {
+                SelectedElement.Deselect();
+            }
+            SelectedElement = element;
+            SelectedElement.Select();
+        }
+
+        public void NextElement()
+        {
+            if(ControlElements.Count == 0)
+            {
+                return;
+            }
+            if(SelectedElement == null)
+            {
+                SelectElement(ControlElements[0]);
+            }
+            else
+            {
+                var index = ControlElements.IndexOf(SelectedElement);
+                var maxIndex = ControlElements.Count - 1;
+                index++;
+                index = (index < 0) ? maxIndex : (index > maxIndex) ? 0 : index;
+                SelectElement(ControlElements[index]);
+            }
+        }
+
+        public void PreviousElement()
+        {
+            if (ControlElements.Count == 0)
+            {
+                return;
+            }
+            if (SelectedElement == null)
+            {
+                SelectElement(ControlElements[0]);
+            }
+            else
+            {
+                var index = ControlElements.IndexOf(SelectedElement);
+                var maxIndex = ControlElements.Count - 1;
+                index--;
+                index = (index < 0) ? maxIndex : (index > maxIndex) ? 0 : index;
+                SelectElement(ControlElements[index]);
+            }
+        }
 
         public void Select()
         {

@@ -24,5 +24,7 @@ namespace Terminal.Scenes
             IsSelectedChanged();
         }
         public abstract void IsSelectedChanged();
+
+        public Action Activate;
     }
 }

@@ -4,18 +4,19 @@ using System.Text;
 
 namespace Terminal.Scenes.MainMenu
 {
-    class MainMenu : Scene
+    class MainMenuScene : Scene
     {
-        public MainMenu(GameManager gameManager) : base(gameManager) {}
+        public MainMenuScene(GameManager gameManager) : base(gameManager) {}
 
         public override void Init()
         {
-            Containers.Add(new MainMenuLeft(this.GameManager));
+            Containers.Add(new NavigationContainer(this.GameManager));
+            SelectContainer(Containers[0]);
         }
 
         public override void Destroy()
         {
-            throw new NotImplementedException();
+
         }
 
         public override void RenderScene()

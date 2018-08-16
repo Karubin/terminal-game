@@ -967,23 +967,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\msvrcina\\.nuget\\packages\\": {},
+    "C:\\Users\\Martin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\msvrcina\\Source\\Repos\\terminal-game\\Terminal\\Terminal.csproj",
+      "projectUniqueName": "D:\\Development\\C#\\Terminal\\Terminal\\terminal-game\\Terminal\\Terminal.csproj",
       "projectName": "Terminal",
-      "projectPath": "C:\\Users\\msvrcina\\Source\\Repos\\terminal-game\\Terminal\\Terminal.csproj",
-      "packagesPath": "C:\\Users\\msvrcina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\msvrcina\\Source\\Repos\\terminal-game\\Terminal\\obj\\",
+      "projectPath": "D:\\Development\\C#\\Terminal\\Terminal\\terminal-game\\Terminal\\Terminal.csproj",
+      "packagesPath": "C:\\Users\\Martin\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\C#\\Terminal\\Terminal\\terminal-game\\Terminal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\msvrcina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

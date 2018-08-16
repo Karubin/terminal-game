@@ -12,16 +12,26 @@ namespace Terminal
 
         public static void Init()
         {
+            if(Console.WindowWidth != WIDTH || Console.WindowHeight != HEIGHT)
+            {
+                Console.SetWindowSize(WIDTH, HEIGHT);
+            }
+
             Console.Title = "Project Terminal";
             Console.CursorVisible = false;
             Console.SetCursorPosition(0, 0);
             Console.SetBufferSize(WIDTH, HEIGHT);
-            Console.SetWindowSize(WIDTH, HEIGHT);
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
 
             Console.Clear();
+        }
+
+        public static void ResetColors()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
         public static void RenderLogo()

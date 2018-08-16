@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Terminal.Scenes;
 
@@ -30,21 +31,39 @@ namespace Terminal
                 container.Render();
             }
 
+            WindowManager.ResetColors();
+
         }
 
         public abstract void RenderScene();
 
         public void HandleInput(ConsoleKey key)
         {
-            if (!HandleInputScene(key) && SelectedContainer != null)
+
+            /*
+             * Generic scene always handles:
+             *      - Tab to cycle through containers
+             *      
+             * Rest is sent to selected container
+             */
+
+            switch (key)
             {
-                SelectedContainer.HandleInput(key);
+                case ConsoleKey.Tab:
+                    NextContainer();
+                    break;
+                default:
+                    if (!HandleInputScene(key) && SelectedContainer != null)
+                    {
+                        SelectedContainer.HandleInput(key);
+                    }
+                    break;
             }
         }
 
         public abstract bool HandleInputScene(ConsoleKey key);
 
-        private void SelectContainer(Container container)
+        protected void SelectContainer(Container container)
         {
             if(SelectedContainer != null)
             {
@@ -52,6 +71,23 @@ namespace Terminal
             }
             SelectedContainer = container;
             SelectedContainer.Select();
+        }
+
+        protected void NextContainer()
+        {
+            if(Containers.Count == 0)
+            {
+                return;
+            }
+            if(SelectedContainer == null)
+            {
+                SelectContainer(Containers[0]);
+                return;
+            }
+            var index = Containers.IndexOf(SelectedContainer);
+            index++;
+            index = (index < 0) ? Containers.Count - 1 : (index >= Containers.Count) ? 0 : index;
+            SelectContainer(Containers[index]);
         }
     }
 }
