@@ -26,6 +26,8 @@ namespace Terminal.Scenes.Game
             ControlElements.Add(new Button(this, 0, 4, "TRAIN"));
             ControlElements.Add(new Button(this, 0, 5, "LOG"));
 
+            ControlElements.Add(new Button(this, 0, 7, "TURN") { Activate = PressedTurn});
+
             ControlElements.Add(new Button(this, 0, Height - 7, "HELP"));
             ControlElements.Add(new Button(this, 0, Height - 6, "SAVE"));
             ControlElements.Add(new Button(this, 0, Height - 5, "MAIN MENU") { Activate = MainMenuPressed });
@@ -50,6 +52,11 @@ namespace Terminal.Scenes.Game
         public override void IsSelectedChanged()
         {
 
+        }
+
+        public void PressedTurn()
+        {
+            GameManager.Game.Update();
         }
 
         public void MainMenuPressed()

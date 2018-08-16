@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="GameLogic\Crew\" />
-    <Folder Include="GameLogic\Calendar\" />
     <Folder Include="GameLogic\Items\" />
     <Folder Include="GameLogic\Generics\" />
     <Folder Include="GameLogic\World\" />

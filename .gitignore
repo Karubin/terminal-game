@@ -4,3 +4,5 @@
 
 /.vs/Terminal/v15
 /.vs/Terminal/DesignTimeBuild
+/Terminal/bin/Debug/netcoreapp2.0/publish
+/Terminal/bin/Release/netcoreapp2.0

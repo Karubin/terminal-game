@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Terminal.GameLogic;
 using Terminal.Scenes;
 using Terminal.Scenes.MainMenu;
 
@@ -11,6 +12,7 @@ namespace Terminal
 
         private bool isRunning;
         private Scene ActiveScene;
+        public Game Game;
 
         #region LIFECYCLE
 
@@ -20,6 +22,8 @@ namespace Terminal
             WindowManager.Init();
 
             // load resources
+
+            Game = new Game(this);
 
             // splash screen / credits
             WindowManager.RenderLogo();

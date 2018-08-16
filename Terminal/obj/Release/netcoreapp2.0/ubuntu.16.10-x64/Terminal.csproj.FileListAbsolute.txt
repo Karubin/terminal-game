@@ -1,0 +1,15 @@
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\appsettings.json
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\libhostpolicy.so
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\libhostfxr.so
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.deps.json
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.runtimeconfig.json
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.runtimeconfig.dev.json
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.dll
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\bin\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.pdb
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.csprojAssemblyReference.cache
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.csproj.CoreCompileInputs.cache
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.AssemblyInfoInputs.cache
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.AssemblyInfo.cs
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.dll
+D:\Development\C#\Terminal\Terminal\terminal-game\Terminal\obj\Release\netcoreapp2.0\ubuntu.16.10-x64\Terminal.pdb

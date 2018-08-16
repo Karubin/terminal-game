@@ -36,7 +36,7 @@ namespace Terminal.Scenes.Game
 
         public override void RenderContainer()
         {
-            string text = "TIME: 13:00 | DAY: 07 | MONTH: 10 | YEAR: 1916";
+            string text = GameManager.Game.Calendar.ToString();
             Console.SetCursorPosition((Width-text.Length)/2, Row + 1);
             Console.Write(text);
         }
