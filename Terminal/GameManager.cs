@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Terminal.Scenes;
 
 namespace Terminal
 {
@@ -8,6 +9,7 @@ namespace Terminal
     {
 
         private bool isRunning;
+        private Scene ActiveScene;
 
         #region LIFECYCLE
 
@@ -27,6 +29,8 @@ namespace Terminal
 
         public void Start()
         {
+            SetScene(new MainMenu(this));
+
             isRunning = true;
             Run();
         }
@@ -44,16 +48,26 @@ namespace Terminal
         public void Stop()
         {
             isRunning = false;
-
+            WindowManager.Init();
             Destroy();
         }
 
         public void Destroy()
         {
+            WindowManager.Init();
             WindowManager.RenderLogo();
         }
 
         #endregion
+
+        public void SetScene(Scene scene)
+        {
+            if(ActiveScene != null)
+            {
+                ActiveScene.Destroy();
+            }
+            ActiveScene = scene;
+        }
 
         private void HandleInput(ConsoleKey key)
         {
@@ -70,6 +84,7 @@ namespace Terminal
         private void Render()
         {
             WindowManager.Init();
+            ActiveScene.Render();
         }
 
     }

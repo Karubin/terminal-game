@@ -10,3 +10,15 @@ D:\Development\C#\Terminal\Terminal\Terminal\obj\Debug\netcoreapp2.0\Terminal.As
 D:\Development\C#\Terminal\Terminal\Terminal\bin\Debug\netcoreapp2.0\Terminal.pdb
 D:\Development\C#\Terminal\Terminal\Terminal\obj\Debug\netcoreapp2.0\Terminal.dll
 D:\Development\C#\Terminal\Terminal\Terminal\obj\Debug\netcoreapp2.0\Terminal.pdb
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\Terminal.deps.json
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.json
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\Terminal.runtimeconfig.dev.json
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\Terminal.dll
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\bin\Debug\netcoreapp2.0\Terminal.pdb
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.csprojAssemblyReference.cache
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfoInputs.cache
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.AssemblyInfo.cs
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.dll
+C:\Users\msvrcina\Source\Repos\terminal-game\Terminal\obj\Debug\netcoreapp2.0\Terminal.pdb

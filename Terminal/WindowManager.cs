@@ -12,13 +12,11 @@ namespace Terminal
 
         public static void Init()
         {
+            Console.Title = "Project Terminal";
             Console.CursorVisible = false;
             Console.SetCursorPosition(0, 0);
-            if(Console.WindowWidth != WIDTH || Console.WindowHeight != HEIGHT)
-            {
-                Console.SetWindowSize(WIDTH, HEIGHT);
-                Console.SetBufferSize(WIDTH, HEIGHT);
-            }
+            Console.SetBufferSize(WIDTH, HEIGHT);
+            Console.SetWindowSize(WIDTH, HEIGHT);
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
@@ -28,25 +26,37 @@ namespace Terminal
 
         public static void RenderLogo()
         {
-            Console.SetCursorPosition(0, 1);
+            Console.SetCursorPosition(0, 6);
             Console.ForegroundColor = ConsoleColor.Red;
 
-            Console.WriteLine(@"$$$$$$$$\                                $$\                     $$\ ");
-            Console.WriteLine(@"\__$$  __|                               \__|                    $$ |");
-            Console.WriteLine(@"   $$ | $$$$$$\   $$$$$$\  $$$$$$\$$$$\  $$\ $$$$$$$\   $$$$$$\  $$ |");
-            Console.WriteLine(@"   $$ |$$  __$$\ $$  __$$\ $$  _$$  _$$\ $$ |$$  __$$\  \____$$\ $$ |");
-            Console.WriteLine(@"   $$ |$$$$$$$$ |$$ |  \__|$$ / $$ / $$ |$$ |$$ |  $$ | $$$$$$$ |$$ |");
-            Console.WriteLine(@"   $$ |$$   ____|$$ |      $$ | $$ | $$ |$$ |$$ |  $$ |$$  __$$ |$$ |");
-            Console.WriteLine(@"   $$ |\$$$$$$$\ $$ |      $$ | $$ | $$ |$$ |$$ |  $$ |\$$$$$$$ |$$ |");
-            Console.WriteLine(@"   \__| \_______|\__|      \__| \__| \__|\__|\__|  \__| \_______|\__|");
-            Console.WriteLine();
+            Console.WriteLine(@"    ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗                               ");
+            Console.WriteLine(@"    ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝                               ");
+            Console.WriteLine(@"    ██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║                                  ");
+            Console.WriteLine(@"    ██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║                                  ");
+            Console.WriteLine(@"    ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║                                  ");
+            Console.WriteLine(@"    ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝                                  ");
+            Console.WriteLine(@"                                                                                             ");
+            Console.WriteLine(@"                  ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗               ");
+            Console.WriteLine(@"                  ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║               ");
+            Console.WriteLine(@"        █████╗       ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║         █████╗");
+            Console.WriteLine(@"        ╚════╝       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║         ╚════╝");
+            Console.WriteLine(@"                     ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗          ");
+            Console.WriteLine(@"                     ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝          ");
 
-            Console.ForegroundColor = ConsoleColor.White;
 
-            Console.WriteLine("Pres any key to continue");
+
+
+            string label = " - PRESS ANY KEY - ";
+            Console.SetCursorPosition((Console.WindowWidth - label.Length) / 2, Console.WindowHeight - 8);
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.Write(label);
 
             Console.ReadKey();
+
             Console.SetCursorPosition(0, 0);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
         }
 

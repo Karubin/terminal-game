@@ -18,6 +18,7 @@ namespace Terminal
         }
 
         public abstract void Init();
+        public abstract void Destroy();
 
         public void Render()
         {

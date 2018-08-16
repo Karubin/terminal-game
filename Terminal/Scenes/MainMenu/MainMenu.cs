@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Terminal.Scenes.MainMenu
+namespace Terminal.Scenes
 {
     class MainMenu : Scene
     {
@@ -13,9 +13,15 @@ namespace Terminal.Scenes.MainMenu
 
         }
 
+        public override void Destroy()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void RenderScene()
         {
-
+            Console.SetCursorPosition(4, 4);
+            Console.Write("Main menu");
         }
 
         public override void HandleInputScene(ConsoleKey key)
