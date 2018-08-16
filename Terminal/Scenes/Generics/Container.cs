@@ -31,23 +31,37 @@ namespace Terminal.Scenes
 
         public void Render()
         {
-            Console.ForegroundColor = (IsSelected) ? ConsoleColor.Red : ConsoleColor.White;
+            RenderContainer();
+
+            Console.ForegroundColor = (IsSelected) ? ConsoleColor.White : ConsoleColor.DarkGray;
             Console.SetCursorPosition(Column, Row);
-            for(int i = 0; i < Width/2; i++)
+
+            string text = (DisplayName.Length + Width) % 2 == 0 ? DisplayName : DisplayName + "─";
+            Console.Write("┌");
+            for (int i = 1; i < (Width - text.Length) / 2 - 1; i++)
             {
-                Console.Write("-");
+                Console.Write("─");
             }
-            Console.Write(DisplayName);
-            for (int i = 0; i < Width / 2; i++)
+            Console.Write(text);
+            for (int i = 0; i < (Width - text.Length) / 2 - 1; i++)
             {
-                Console.Write("-");
+                Console.Write("─");
             }
+            Console.Write("┐");
+            Console.SetCursorPosition(Column, Row + Height - 1);
+            Console.Write("└");
+            for (int i = 1; i < Width - 2; i++)
+            {
+                Console.Write("─");
+            }
+            Console.Write("┘");
+
+
             Console.ForegroundColor = ConsoleColor.White;
             foreach (ControlElement el in ControlElements)
             {
                 el.Render();
             }
-            RenderContainer();
             WindowManager.ResetColors();
         }
 
@@ -71,7 +85,7 @@ namespace Terminal.Scenes
                     NextElement();
                     break;
                 case ConsoleKey.Enter:
-                    if(SelectedElement.Activate != null)
+                    if(SelectedElement != null && SelectedElement.Activate != null)
                     {
                         SelectedElement.Activate();
                     }
@@ -90,7 +104,7 @@ namespace Terminal.Scenes
 
         public void SelectElement(ControlElement element)
         {
-            if(SelectedElement != null)
+            if (SelectedElement != null)
             {
                 SelectedElement.Deselect();
             }
@@ -100,11 +114,11 @@ namespace Terminal.Scenes
 
         public void NextElement()
         {
-            if(ControlElements.Count == 0)
+            if (ControlElements.Count == 0)
             {
                 return;
             }
-            if(SelectedElement == null)
+            if (SelectedElement == null)
             {
                 SelectElement(ControlElements[0]);
             }

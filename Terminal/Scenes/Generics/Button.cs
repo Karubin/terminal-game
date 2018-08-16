@@ -31,7 +31,11 @@ namespace Terminal.Scenes
 
         public override void RenderElement()
         {
-
+            Console.ForegroundColor = ForegroundColor;
+            Console.BackgroundColor = BackgroundColor;
+            Console.SetCursorPosition(Column, Row);
+            string text = IsSelected ? ">" + DisplayName : " " + DisplayName;
+            Console.Write(text);
         }
     }
 }

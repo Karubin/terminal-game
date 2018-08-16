@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Terminal.Scenes.Game;
 
 namespace Terminal.Scenes.MainMenu
 {
@@ -18,7 +19,7 @@ namespace Terminal.Scenes.MainMenu
         public override void Init()
         {
             ControlElements.Add(new Button(this, 0, 0, "PLAY") {Activate= PressedPlay });
-            ControlElements.Add(new Button(this, 0, 1, "OPTIONS") { Activate = PressedOptions});
+            ControlElements.Add(new Button(this, 0, 1, "CONTROLS") { Activate = PressedOptions});
             ControlElements.Add(new Button(this, 0, 2, "CREDITS") { Activate = PressedCredits});
             ControlElements.Add(new Button(this, 0, 3, "EXIT") { Activate = PressedExit} );
 
@@ -46,7 +47,7 @@ namespace Terminal.Scenes.MainMenu
 
         public void PressedPlay()
         {
-
+            GameManager.SetScene(new TravelScene(GameManager));
         }
 
         public void PressedOptions()
@@ -56,7 +57,7 @@ namespace Terminal.Scenes.MainMenu
 
         public void PressedCredits()
         {
-
+            GameManager.SetScene(new CreditsScene(GameManager));
         }
 
         public void PressedExit()

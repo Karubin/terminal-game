@@ -23,12 +23,7 @@ namespace Terminal.Scenes
         }
         public void Render()
         {
-            Console.ForegroundColor = ForegroundColor;
-            Console.BackgroundColor = BackgroundColor;
-            Console.SetCursorPosition(Column, Row);
-            Console.Write(DisplayName);
             RenderElement();
-            WindowManager.ResetColors();
         }
         public abstract void RenderElement();
 
