@@ -24,9 +24,9 @@ namespace Terminal.Scenes
             Console.Write("Main menu");
         }
 
-        public override void HandleInputScene(ConsoleKey key)
+        public override bool HandleInputScene(ConsoleKey key)
         {
-
+            return false;
         }
     }
 }
