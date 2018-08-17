@@ -11,6 +11,8 @@ namespace Terminal.Scenes.MainMenu
         public override void Init()
         {
             Containers.Add(new NavigationContainer(this.GameManager));
+            Containers.Add(new MainMenuHelpContainer(GameManager));
+
             SelectContainer(Containers[0]);
         }
 

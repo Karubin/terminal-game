@@ -19,7 +19,7 @@ namespace Terminal.Scenes.MainMenu
         public override void Init()
         {
             ControlElements.Add(new Button(this, 0, 0, "PLAY") {Activate= PressedPlay });
-            ControlElements.Add(new Button(this, 0, 1, "CONTROLS") { Activate = PressedOptions});
+            ControlElements.Add(new Button(this, 0, 1, "HELP") { Activate = PressedOptions});
             ControlElements.Add(new Button(this, 0, 2, "CREDITS") { Activate = PressedCredits});
             ControlElements.Add(new Button(this, 0, 3, "EXIT") { Activate = PressedExit} );
 
