@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Terminal.GameLogic.World;
 
 namespace Terminal.GameLogic
 {
@@ -8,6 +9,8 @@ namespace Terminal.GameLogic
     {
         GameManager GameManager;
         public Calendar Calendar;
+
+        public AbstractStation CurrentStation { get; set; }
 
         public Game(GameManager gameManager)
         {
@@ -17,6 +20,9 @@ namespace Terminal.GameLogic
 
         public void Init()
         {
+
+            CurrentStation = new HomeStation(this);
+
             Calendar = new Calendar(this);
         }
 

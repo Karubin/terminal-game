@@ -23,7 +23,7 @@ namespace Terminal.Scenes.MainMenu
 
         public override void RenderScene()
         {
-
+            WindowManager.DrawImage(48, 8, WindowManager.TrainImage, ConsoleColor.Red);
         }
 
         public override bool HandleInputScene(ConsoleKey key)

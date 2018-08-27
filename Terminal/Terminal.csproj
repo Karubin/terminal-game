@@ -21,9 +21,7 @@
     <Folder Include="GameLogic\Crew\" />
     <Folder Include="GameLogic\Items\" />
     <Folder Include="GameLogic\Generics\" />
-    <Folder Include="GameLogic\World\" />
     <Folder Include="GameLogic\Train\" />
-    <Folder Include="GameLogic\World\Stations\" />
   </ItemGroup>
 
 </Project>

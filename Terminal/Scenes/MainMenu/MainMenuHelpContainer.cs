@@ -9,7 +9,7 @@ namespace Terminal.Scenes.MainMenu
         public MainMenuHelpContainer(GameManager gameManager) : base(gameManager)
         {
             Column = 1;
-            Row = WindowManager.HEIGHT - 3;
+            Row = WindowManager.HEIGHT - 4;
             Width = WindowManager.WIDTH - 1;
             Height = 3;
             DisplayName = "CONTROLS";

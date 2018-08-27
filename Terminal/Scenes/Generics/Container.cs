@@ -164,6 +164,11 @@ namespace Terminal.Scenes
         }
         public abstract void IsSelectedChanged();
 
+        protected void SetCursorPosition(int column, int row)
+        {
+            Console.SetCursorPosition(this.Column + column + 1, this.Row + row + 1);
+        }
+
 
     }
 }

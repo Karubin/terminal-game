@@ -89,7 +89,7 @@ namespace Terminal
 
         private void Render()
         {
-            WindowManager.Init();
+            WindowManager.Update();
             ActiveScene.Render();
         }
 

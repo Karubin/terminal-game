@@ -34,7 +34,7 @@ namespace Terminal.Scenes
             Console.ForegroundColor = ForegroundColor;
             Console.BackgroundColor = BackgroundColor;
             Console.SetCursorPosition(Column, Row);
-            string text = IsSelected ? ">" + DisplayName : " " + DisplayName;
+            string text = IsSelected ? ">" + DisplayName : "" + DisplayName;
             Console.Write(text);
         }
     }
